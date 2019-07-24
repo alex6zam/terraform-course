@@ -1,3 +1,5 @@
+// File for defining variables.
+
 variable "newvariable" {
     type = "string"
     default = "thisisavalue"
@@ -25,10 +27,20 @@ variable "new_value" {
 
 }
 
-//This variable must be passed as a parameter when excecuting terraform commands
+//This variable must be passed as a parameter when executing terraform commands
 variable "newmap" {
     type = "map"
 } 
+
+variable "cidrblock" {
+    default = "10.0.0.0/16"
+}
+
+variable "coffe_type" {
+    default = "nothing"
+    description = "Identifying what coffe level the application needs."
+}
+
 
 //Output variables
 
@@ -36,4 +48,3 @@ output "first_output" {
     value = "this is the value through execution."
 }
 
-//output ""
